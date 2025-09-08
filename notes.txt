@@ -1,0 +1,446 @@
+# Notes on C Programming
+
+## Introduction of C
+
+* C is a **high-level / middle-level programming language**.
+* Example Program:
+
+```c
+#include <stdio.h>
+void main() {
+    int i; // variable = container
+    for(i = 1; i <= 1000; i++) {
+        printf("%4d", i);
+    }
+}
+```
+
+### What is a Program?
+
+* A **set of instructions** is called a program.
+
+### What is Software?
+
+* A set of programs is called **software**.
+* IT industry software is digitized and automated.
+
+### Types of Software
+
+1. **System Software**
+
+   * Designed to manage and control hardware and provide a platform for applications.
+   * Examples: Operating System, Device Driver, Translator, etc.
+
+2. **Application Software**
+
+   * Designed for end-users to perform specific tasks.
+   * Examples: WhatsApp, Facebook, Instagram, etc.
+
+---
+
+## Programming Languages
+
+### What is a Language?
+
+* Language is a way to communicate.
+* Programming languages help humans communicate with computers.
+
+### Types of Programming Languages
+
+1. **Machine Language**
+
+   * Written in binary (0s and 1s).
+   * Difficult for humans to read.
+   * Example: `100011`
+
+2. **Low-Level / Assembly Language**
+
+   * Uses mnemonics like `ADD`, `SUB`.
+   * Example Assembly Program:
+
+```c
+#include <stdio.h>
+void main() {
+    int a = 10, b = 20, c;
+    asm {
+        mov ax, a
+        mov bx, b
+        add ax, bx
+        mov c, ax
+    }
+    printf("c = %d", c);
+}
+// Output: c = 30
+```
+
+3. **High-Level Language**
+
+   * Uses simple English.
+   * Easy to learn and understand.
+   * Example:
+
+```c
+#include <stdio.h>
+void main() {
+    int a = 10, b = 20, c;
+    c = a + b;
+    printf("c = %d", c);
+}
+// Output: c = 30
+```
+
+* C is a **middle-level language** (combines low-level and high-level features).
+* C is **compiler-based programming language**.
+
+---
+
+## Translators
+
+* Translators convert high-level language into machine code.
+* Types:
+
+  1. **Compiler**: Converts whole program into binary code at once.
+  2. **Interpreter**: Converts line by line.
+  3. **Assembler**: Converts assembly to machine code.
+
+### Compiler vs Interpreter
+
+* Compiler → Converts entire code, then shows errors.
+* Interpreter → Executes line by line, stops at error.
+
+---
+
+## Programming Paradigms
+
+* A **paradigm** is the structure/rules of writing programs.
+* C follows **Procedure-Oriented Programming Structure (POPS)**.
+
+### Monolithic Programming
+
+* All code written sequentially.
+
+```c
+#include <stdio.h>
+void main() {
+    printf("Good Morning\n");
+    printf("Welcome to Naresh IT\n");
+    printf("Thank You\n");
+}
+```
+
+### Procedure-Oriented Programming
+
+* Breaks program into **functions / subroutines**.
+* Advantages:
+
+  1. Easy to find errors
+  2. Modularity
+  3. Reusability
+  4. Simplicity
+  5. Efficiency
+
+### Object-Oriented Programming (OOPS)
+
+* Features:
+
+  1. Class
+  2. Object
+  3. Encapsulation
+  4. Inheritance
+  5. Polymorphism
+  6. Abstraction
+
+* **Class**: Blueprint/template for objects.
+
+* **Object**: Instance of class.
+
+* **Encapsulation**: Binding data and methods together.
+
+* **Inheritance**: Reuse properties of another class.
+
+* **Polymorphism**: Same function name, different forms.
+
+  * Method Overloading
+  * Method Overriding
+
+* **Abstraction**: Hiding details, showing only essentials.
+
+---
+
+## C Language Characteristics
+
+* Developed for **UNIX OS**.
+* Machine independent but platform dependent → Partial portable.
+* Applications:
+
+  * **Standalone Applications**: Run on a single system.
+  * **Web Applications**: Run on servers via internet.
+
+---
+
+## Fundamentals of C
+
+### Character Set
+
+* C uses **ASCII character set**.
+* ASCII contains:
+
+  * 52 alphabets (A–Z, a–z)
+  * 10 digits (0–9)
+  * Operators (+, -, \*, /, etc.)
+  * Special characters
+
+### ASCII Values
+
+| Character | ASCII Value |
+| --------- | ----------- |
+| a–z       | 97–122      |
+| A–Z       | 65–90       |
+| 0–9       | 48–57       |
+| Space     | 32          |
+| +         | 43          |
+| \*        | 42          |
+| ESC       | 27          |
+| Backspace | 8           |
+| Tab       | 9           |
+| Enter     | 10          |
+
+---
+
+## Compilation & Execution Process
+
+1. Source Code → Compiler → Object Code
+2. Linker combines object code with libraries.
+3. Loader loads program into memory.
+4. Execution happens on CPU.
+
+---
+
+## Installing Turbo C++
+
+* Download Turbo C++ from browser.
+* Opens an IDE (blue screen).
+* Shortcuts:
+
+  * Compile → `Alt + F9`
+  * Run → `Ctrl + F9`
+  * Full Screen → `Alt + Enter`
+1. Important Points
+#include <stdio.h>   // Standard I/O library
+#include <conio.h>   // Console I/O library
+void main() {
+    clrscr();                  // clear screen
+    printf("YASH\n");
+    printf("Bunkar\n");
+    printf("MP");
+    getch();                   // hold output
+}
+
+
+👉 Output:
+
+YASH
+Bunkar
+MP
+
+2. Escape Sequence Characters (Backslash \)
+
+Escape characters start with backslash \.
+
+Used to format output.
+
+Participate in execution but not displayed in output.
+
+Each escape sequence = 1 byte.
+
+Character	Description
+\a	Alert (beep sound)
+\b	Backspace
+\n	New line
+\t	Horizontal tab
+\r	Carriage return
+\f	Form feed
+\v	Vertical tab
+\0	Null char
+\\	Backslash
+\'	Single quote
+\"	Double quote
+3. Tokens in C
+
+👉 The smallest individual words in C are tokens.
+
+Types of Tokens:
+
+Keywords → Reserved words with fixed meaning (32 total).
+Example:
+
+int, float, char, while, for, if, else, return, void
+
+
+Identifiers → Names of variables, functions, arrays, etc.
+
+Must start with alphabet or underscore.
+
+Case sensitive.
+
+No special characters except _.
+
+Max 32 characters.
+
+Avoid keywords.
+
+✅ Example: int marks, total_sum;
+❌ Invalid: int 1num, a-b;
+
+Constants
+
+Fixed values that cannot change during execution.
+
+Example:
+
+const float pi = 3.14;   // floating constant
+const char gender = 'M'; // character constant
+
+
+Operators
+
+Symbols used for operations (explained later).
+
+Special Symbols
+
+() , ; {} [] # "" etc.
+
+Strings
+
+Sequence of characters inside double quotes "Hello".
+
+4. Data Types in C
+
+To store values, we need data types.
+
+Basic Types:
+
+int → Integer numbers
+
+float → Decimal numbers
+
+char → Characters
+
+Classification:
+
+Primitive Data Types → int, float, char
+
+Derived Data Types → array, pointer, structure
+
+User-defined Data Types → typedef, enum
+
+👉 Example:
+
+int age = 20;
+float marks = 87.5;
+char grade = 'A';
+
+5. Operators
+Types of Operators:
+
+Unary Operators (one operand)
+Example: ++a, --a, sizeof(a)
+
+Binary Operators (two operands)
+Example: a+b, a-b, a*b, a/b
+
+Ternary Operator
+Example:
+
+condition ? true_part : false_part;
+
+Arithmetic Operators
+
+Used for mathematical operations.
+
++   addition
+-   subtraction
+*   multiplication
+/   division
+%   modulus (remainder)
+
+
+👉 Example:
+
+5 % 2 = 1
+5 / 2 = 2
+
+
+⚠️ Note: % only works with integers. For float modulus use fmod() from <math.h>.
+
+Relational Operators
+==   equal
+!=   not equal
+>    greater
+<    smaller
+>=   greater or equal
+<=   smaller or equal
+
+Logical Operators
+&&   AND
+||   OR
+!    NOT
+
+
+👉 Example:
+
+(5 > 2 && 7 > 3)  // true
+(5 < 2 || 7 > 3)  // true
+
+Operator Precedence
+
+() , []
+
++ , - , ++ , -- (unary)
+
+* , / , %
+
++ , - (binary)
+
+== , !=
+
+&& , ||
+
+?: (ternary)
+
+= , += , -= , *= , /=
+
+6. Type Casting
+
+Implicit (Type Promotion)
+
+int a = 5;
+float b = 2;
+printf("%f", a / b);   // converted to float automatically
+
+
+Explicit (Type Conversion)
+
+float result = (float)5 / 2;
+printf("%f", result);   // 2.500000
+
+7. Examples
+Reverse a 3-digit number without loop
+#include <stdio.h>
+#include <conio.h>
+
+void main() {
+    int n = 123;
+    int r;
+    r = (n % 10) * 100 + ((n / 10) % 10) * 10 + (n / 100);
+    printf("Reverse = %d", r);
+    getch();
+}
+
+Check Even/Odd without if-else
+#include <stdio.h>
+void main() {
+    int n;
+    scanf("%d", &n);
+    n % 2 == 0 && printf("Even") || printf("Odd");
+}
