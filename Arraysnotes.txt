@@ -1,0 +1,135 @@
+Notes on Arrays in C
+1. Introduction
+
+Array: Collection of homogeneous (same type) elements stored in contiguous memory locations.
+
+Derived data type.
+
+Acts as an implicit pointer (array name gives the base address).
+
+Helps manage multiple values under a single name.
+
+Advantages
+
+Stores multiple values with one variable name.
+
+Reduces program length and errors.
+
+Simplifies data handling in functions.
+
+Allows ordered data storage.
+
+Disadvantages
+
+Fixed size (constant positive integer).
+
+Cannot resize at runtime → may cause memory wastage or shortage.
+
+2. Types of Arrays
+
+One Dimensional Array (1D)
+
+Single row, multiple columns.
+
+Uses single subscript [ ].
+
+Syntax:
+
+datatype array_name[size] = {elements};
+int a[4] = {9, 3, 1, 8};
+
+
+Memory allocation: Array variable stores base address (address of 0th element).
+
+Common tasks:
+
+Reading/printing elements.
+
+Finding sum, average.
+
+Counting even, odd, zero elements.
+
+Finding max/min element.
+
+Programs:
+
+Reverse array elements.
+
+Decimal → Binary/Octal/Hex conversion.
+
+Student marks (total, average, grade).
+
+Linear search.
+
+Two Dimensional Array (2D)
+
+Several rows and columns → matrix.
+
+Uses double subscript [ ][ ].
+
+Syntax:
+
+datatype array_name[rows][cols] = { {elements}, {elements} };
+int a[2][3] = {{1,2,3},{4,5,6}};
+
+
+Properties:
+
+Array of arrays.
+
+Acts as an implicit double pointer.
+
+Tasks:
+
+Print position, value, and address.
+
+Transpose of matrix.
+
+Trace (sum of diagonal elements).
+
+Count even/odd/zero elements row-wise/col-wise.
+
+3. Array Operations
+🔹 Basic Operations
+
+Reading & printing.
+
+Traversing array.
+
+Searching (Linear search).
+
+🔹 Sorting
+
+Bubble Sort (ascending/descending).
+
+🔹 Insertion & Deletion
+
+Insert element at end (PUSH).
+
+Insert at specific position (right shift).
+
+Delete last element (POP).
+
+Delete from specific position (left shift).
+
+Delete duplicate elements.
+
+4. Practice Programs
+
+Reverse array elements permanently.
+
+Convert decimal → binary, octal, hexadecimal.
+
+Student record (ID, name, 6 subjects → total, average, grade).
+
+Linear search.
+
+Bubble sort (ascending/descending).
+
+Insert/Delete elements in array.
+
+Remove duplicates.
+
+Transpose and trace of matrix.
+
+Count even/odd/zero row-wise and col-wise.
