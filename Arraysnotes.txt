@@ -133,3 +133,4 @@ Remove duplicates.
 Transpose and trace of matrix.
 
 Count even/odd/zero row-wise and col-wise.
+sgd 
